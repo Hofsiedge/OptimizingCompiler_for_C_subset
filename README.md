@@ -60,25 +60,25 @@ CMAIN:
 	MOV ebp,	esp             ; for correct debugging
 
 	MOV ebx,	2               ; 2 * (1) and is computed in parser
-                            ; ebx is for a now
+                            		; ebx is for a now
 
 	MOV eax,	2
-	IMUL ebx                  ; 2 * a
+	IMUL ebx                  	; 2 * a
 
 
-	MOV dword [__temp], 3     ; save 3 into a temporary variable
-	IMUL 	dword [__temp]      ; and multiply 2 * a by 3
+	MOV dword [__temp], 3     	; save 3 into a temporary variable
+	IMUL 	dword [__temp]      	; and multiply 2 * a by 3
 
 
 	MOV ecx,	eax             ; ecx is for b now
 
 
 	MOV eax,	4
-	IMUL ebx                  ; 4 * a
+	IMUL ebx                  	; 4 * a
 
 
 	MOV dword [__temp], 2 
-	IMUL 	dword [__temp]      ; 4 * a * 2
+	IMUL 	dword [__temp]      	; 4 * a * 2
 
 
 
@@ -94,7 +94,7 @@ CMAIN:
 
 
 	MOV eax,	ecx
-	IMUL edx                  ; b * c
+	IMUL edx                  	; b * c
 
 
 	MOV dword [__temp], eax
@@ -109,7 +109,7 @@ CMAIN:
 
 
 	MOV eax,	0
-	RET                       ; return 0
+	RET                       	; return 0
 ```
 
 (comments are written after the compilation just to make it more understandable)
