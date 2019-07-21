@@ -26,8 +26,11 @@ The optimization is register allocation by graph colouring described in ['Advanc
 
 ## How to use
 1. Install ANTLR4, Java and Python 3
-2. Use `java org.antlr.v4.Tool C.g4 -no-listener -no-visitor` (or just `antlr4 C.g4 -no-listener -no-visitor` if you have set up `antlr4` command from ANTLR 4 getting started tutorial) command to build Python files of the parser
-3. Use `python compile.py <path to the source code> > <output file>` to generate code (like `python compile.py test_dir\source\complex.c > test_dir\compiled\complex.asm`)
+2. `cd` to the compiler directory
+3. Run `gen` to generate parser and lexer files
+4. Run `make` to compile all the .c files from `test_dir\source` to .asm files in  `test_dir\compiled`
+5. If you have [SASM](https://dman95.github.io/SASM/english.html) installed, you can run `open_tests` to open all .asm files in `set_dir\compiled` in SASM (you may need to change the path to SASM in open_tests.bat)
+6. Run `clean` to clean up target directories
 
 ## Examples
 Simple arithmetics:
